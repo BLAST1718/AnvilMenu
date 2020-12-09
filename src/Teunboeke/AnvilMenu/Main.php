@@ -1,7 +1,7 @@
 
 <?php
 
-namespace ibrahim\RepairRenameUI;
+namespace Teunboeke\AnvilMenu;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
