@@ -52,7 +52,7 @@ public function rruiform(Player $sender){
                             break;
       }
     });
-    $form->setTitle(T::BOLD . T::GREEN . "AnvilUI");
+    $form->setTitle(T::BOLD . T::GREEN . "AnvilMenu");
     $form->addButton(T::YELLOW . "•REPAIR•");
     $form->addButton(T::AQUA . "•RENAME•");
     $form->addButton(T::GOLD . "•Custom Lore•");
