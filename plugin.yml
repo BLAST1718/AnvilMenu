@@ -1,0 +1,11 @@
+name: AnvilMenu
+main: Teunboeke\AnvilMenu\Main
+version: 1.0.0
+api: 3.0.0
+author: Teunboeke 
+depend:
+ - EconomyAPI
+
+commands:
+ anvilui:
+  description: "opens the anvilui"
