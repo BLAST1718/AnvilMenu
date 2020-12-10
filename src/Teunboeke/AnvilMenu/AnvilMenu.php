@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Teunboeke\AnvilMenu;
 
-class SimpleForm extends Form {
+class AnvilMenu extends Form {
 
     const IMAGE_TYPE_PATH = 0;
     const IMAGE_TYPE_URL = 1;
