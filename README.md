@@ -1,5 +1,4 @@
 # AnvilMenu
-Bassically an anvil but its in a ui
+Bassically an anvil but its in a ui /anvilui
 
-# what to do
-testing the plugin
+
