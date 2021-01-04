@@ -13,7 +13,6 @@ use pocketmine\item\Tool;
 use pocketmine\item\Armor;
 use pocketmine\Player;
 use pocketmine\Server;
-use pocketmine\utils\TextFormat as T;
 
 use jojoe77777\FormAPI\{SimpleForm, CustomForm};
 use onebone\economyapi\EconomyAPI;
@@ -52,11 +51,11 @@ public function rruiform(Player $sender){
                             break;
       }
     });
-    $form->setTitle(T::BOLD . T::GREEN . "AnvilMenu");
-    $form->addButton(T::YELLOW . "•REPAIR•");
-    $form->addButton(T::AQUA . "•RENAME•");
-    $form->addButton(T::GOLD . "•Custom Lore•");
-    $form->addButton(T::RED . "•EXIT•");
+    $form->setTitle("AnvilMenu");
+    $form->addButton("•REPAIR•");
+    $form->addButton("•RENAME•");
+    $form->addButton("•Custom Lore•");
+    $form->addButton("•EXIT•");
     $form->sendToPlayer($sender);
  }
 public function menu(Player $sender){
@@ -74,10 +73,10 @@ public function menu(Player $sender){
                             break;
       }
     });
-    $form->setTitle(T::BOLD . T::GREEN . "•RRUI•");
-    $form->addButton(T::YELLOW . "•USE EXP•");
-    $form->addButton(T::AQUA . "•USE MONEY•");
-    $form->addButton(T::RED . "•EXIT•");
+    $form->setTitle("•RRUI•");
+    $form->addButton("•USE EXP•");
+    $form->addButton("•USE MONEY•");
+    $form->addButton("•EXIT•");
     $form->sendToPlayer($sender);
  }
 public function xp(Player $sender){
@@ -134,20 +133,20 @@ public function money(Player $sender){
 	   if($item instanceof Armor or $item instanceof Tool){
 	     if($item->getDamage() > 0){
 		 $sender->getInventory()->setItem($index, $item->setDamage(0));
-                 $sender->sendMessage(T::GREEN . "Your item have been repaired");
+                 $sender->sendMessage("Your item have been repaired");
 		  return true;
 		    }else{
-		 $sender->sendMessage(T::RED . "Item doesn't have any damage.");
+		 $sender->sendMessage("Item doesn't have any damage.");
 	       	return false;			
      }
 		return true;
 	           }else{
-         	$sender->sendMessage(T::RED . "This item can't repaired");
+         	$sender->sendMessage("This item can't repaired");
 		return false;
 		}
 		  return true;
 			}else{
-		$sender->sendMessage(T::RED . "You don't have enough money!");
+		$sender->sendMessage("You don't have enough money!");
 		return true;
 	 }
 	   });
@@ -156,7 +155,7 @@ public function money(Player $sender){
           $pc = $mny * $dg;
           $economy = EconomyAPI::getInstance();
           $mne = $economy->myMoney($sender);
-          $f->setTitle(T::BOLD . T::GOLD . "RepairUI");
+          $f->setTitle("RepairUI");
 	  $f->addLabel("§eYour money: $mne \n§aPrice perDamage: $mny\n§aItem damage: $dg \n§dTotal money needed : $pc");
           $f->sendToPlayer($sender);
    }
@@ -176,8 +175,8 @@ public function renamemenu(Player $sender){
                             break;
       }
     });
-    $form->setTitle(T::BOLD . T::GREEN . "•RRUI•");
-    $form->addButton(T::YELLOW . "•USE EXP•");
+    $form->setTitle("•RRUI•");
+    $form->addButton("•USE EXP•");
     $form->addButton(T::AQUA . "•USE MONEY•");
     $form->addButton(T::RED . "•EXIT•");
     $form->sendToPlayer($sender);
